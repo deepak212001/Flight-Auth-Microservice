@@ -30,6 +30,8 @@ async function signup(req, res) {
 
 async function signin(req, res) {
     try {
+
+        console.log("originalUrl hai", req.originalUrl)
         const user = await UserService.signin({
             email: req.body.email,
             password: req.body.password
